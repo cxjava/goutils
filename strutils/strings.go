@@ -5,8 +5,8 @@ import (
 	"unicode/utf8"
 )
 
-func TrimRightSpace(s string) string {
-	return strings.TrimRight(string(s), "\r\n\t ")
+func TrimSpace(s string) string {
+	return strings.TrimRight(strings.TrimLeft(s, "\r\n\t "), "\r\n\t ")
 }
 
 func SubStringBetween(str, begin, end string) string {
